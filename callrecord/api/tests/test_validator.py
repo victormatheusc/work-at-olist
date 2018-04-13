@@ -61,3 +61,11 @@ def test_extra_call_data():
         "call_id": 71
     }
     assert call_data_validator(complete_end_record) == False
+
+
+def test_empty_call_data():
+    complete_start_record = {}
+    assert call_data_validator(complete_start_record) == False
+
+    complete_end_record = {}
+    assert call_data_validator(complete_end_record) == False
