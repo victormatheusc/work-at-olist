@@ -21,3 +21,21 @@ def test_complete_call_data():
         "call_id": 71
     }
     assert call_data_validator(complete_end_record) == True
+
+
+def test_incomplete_call_data():
+    complete_start_record = {
+        "id": "123654789",
+        "type": "start",
+        "timestamp": "2017-12-12T15:07:13Z",
+        "call_id": 71,
+        "source": "84912345678"
+    }
+    assert call_data_validator(complete_start_record) == False
+
+    complete_end_record = {
+        "id": "123654789",
+        "type": "end",
+        "call_id": 71
+    }
+    assert call_data_validator(complete_end_record) == False
