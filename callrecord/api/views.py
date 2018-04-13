@@ -5,3 +5,7 @@ def save_call_data(data):
         return {'success': 'POST method is working'}, 200
 
     return {'error': 'Data validation problem'}, 400
+
+
+def get_bill(phonenumber):
+    return {'success': 'GET method is working'}, 200
