@@ -12,3 +12,9 @@ def date_validator(start_date, end_date):
     if end_date >= start_date:
         return True
     return False
+
+
+def phone_validator(source, destination):
+    if source != destination:
+        return True
+    return False
