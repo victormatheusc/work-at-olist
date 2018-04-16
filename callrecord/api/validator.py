@@ -7,3 +7,8 @@ def call_data_validator(data):
         return True
     except:
         return False
+
+def date_validator(start_date, end_date):
+    if end_date >= start_date:
+        return True
+    return False
